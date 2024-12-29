@@ -79,15 +79,20 @@ struct ContentView: View {
                     Button {
                         fetcher.fetchGenes()
                     } label: {
-                        Label("Refresh", systemImage: "arrow.clockwise")
+                        Label("Refresh", systemImage: "pill")
                     }
                     Spacer()
                     Button {
                         fetcher.genes.removeAll()
                     } label: {
-                        Label("Clear", systemImage: "trash")
+                        Label("Clear", systemImage: "thermometer")
                     }
                     Spacer()
+                    Button {
+                        fetcher.fetchGenes()
+                    } label: {
+                        Label("Refresh", systemImage: "atom")
+                    }
                     
                 }
             }
