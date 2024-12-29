@@ -70,6 +70,30 @@ struct ContentView: View {
             .onAppear {
                 fetcher.fetchGenes()
             }
+            .toolbar{
+            
+        // 3 button menu at bottom
+        
+            ToolbarItem(placement: .bottomBar) {
+                HStack {
+                    Button {
+                        fetcher.fetchGenes()
+                    } label: {
+                        Label("Refresh", systemImage: "arrow.clockwise")
+                    }
+                    Spacer()
+                    Button {
+                        fetcher.genes.removeAll()
+                    } label: {
+                        Label("Clear", systemImage: "trash")
+                    }
+                    Spacer()
+                    
+                }
+            }
+            }
+            
+            
         }
     }
 }
